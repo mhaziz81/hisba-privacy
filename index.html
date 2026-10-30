@@ -5,47 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>سياسة الخصوصية · حسبتي — Hisbati Privacy Policy</title>
 <style>
+  /* Brand fonts, served from this site (no third-party font request). */
+  @font-face{font-family:"El Messiri";src:url(fonts/ElMessiri-Bold.ttf) format("truetype");font-weight:700;font-display:swap}
+  @font-face{font-family:"Arimo";src:url(fonts/Arimo-Regular.ttf) format("truetype");font-weight:400;font-display:swap}
+  @font-face{font-family:"Arimo";src:url(fonts/Arimo-Bold.ttf) format("truetype");font-weight:700;font-display:swap}
+  /* Brand palette only: green #63DAC9, tech blue #427FCE, dark gray #575756,
+     light gray #EDEDED, and their tints. No white text on green. */
   :root{
-    --maroon:#3756D0; --gold:#16808F; --gold-ink:#16808F;
-    --bg:#F4F8FA; --card:#FFFFFF; --ink:#14213D; --muted:#5D6878;
-    --line:#CFD9E4; --ok:#1B7F53;
+    --blue:#427FCE; --green:#63DAC9; --tick:#427FCE;
+    --bg:#F6F6F6; --card:#FFFFFF; --ink:#575756; --muted:#6E6E6D;
+    --line:#D1D1D0; --soft:#DCE8F7; --link:#427FCE; --num:#427FCE;
   }
   @media (prefers-color-scheme: dark){
-    :root{ --bg:#0D1420; --card:#152033; --ink:#EAF1FA; --muted:#98A6BA;
-           --line:#2E3F5C; --gold-ink:#54B4C8; --maroon:#8FB2FF; }
-    .switch button[aria-pressed="true"]{color:#0D1420 !important}
+    :root{ --bg:#575756; --card:#6E6E6D; --ink:#FAFAFA; --muted:#D1D1D0;
+           --line:#858584; --soft:#6E6E6D; --link:#9AE7DC; --num:#9AE7DC; --tick:#9AE7DC; }
   }
   *{box-sizing:border-box}
   body{
     margin:0; background:var(--bg); color:var(--ink);
-    font-family:"Segoe UI",system-ui,-apple-system,"Noto Sans Arabic",Tahoma,sans-serif;
+    font-family:"Arimo","Segoe UI",system-ui,-apple-system,"Noto Sans Arabic",Tahoma,sans-serif;
     line-height:1.85; font-size:16.5px;
   }
+  h1,h2,h3,.switch button{font-family:"El Messiri","Arimo","Segoe UI",system-ui,sans-serif;letter-spacing:.01em}
   .wrap{max-width:760px;margin:0 auto;padding:0 20px 72px}
   header{padding:44px 0 22px;text-align:center}
-  .mark{
-    width:66px;height:66px;border-radius:19px;margin:0 auto 16px;
-    background:#FFFFFF;border:1px solid var(--line);
-    display:flex;align-items:center;justify-content:center;
-    box-shadow:0 6px 20px rgba(55,86,208,.18);
-  }
-  .mark svg{width:56px;height:56px;display:block}
-  h1{font-size:1.6rem;margin:0 0 4px;letter-spacing:-.2px}
+  .mark{width:84px;height:84px;margin:0 auto 12px}
+  .mark svg{width:84px;height:84px;display:block}
+  h1{font-size:1.75rem;margin:0 0 4px}
   .sub{color:var(--muted);font-size:.94rem;margin:0}
   .switch{display:flex;gap:8px;justify-content:center;margin:22px 0 6px}
   .switch button{
-    font:inherit;font-size:.9rem;cursor:pointer;padding:7px 20px;border-radius:999px;
+    font-size:.95rem;font-weight:700;cursor:pointer;padding:6px 20px;border-radius:999px;min-height:40px;
     border:1px solid var(--line);background:transparent;color:var(--muted);transition:.15s;
   }
-  .switch button[aria-pressed="true"]{
-    background:var(--maroon);border-color:var(--maroon);color:#fff;font-weight:600;
-  }
+  .switch button[aria-pressed="true"]{background:var(--soft);border-color:var(--blue);color:var(--ink)}
   section.lang[hidden]{display:none}
   h2{
-    font-size:1.08rem;margin:34px 0 10px;padding-bottom:8px;
+    font-size:1.15rem;margin:34px 0 10px;padding-bottom:8px;
     border-bottom:1px solid var(--line);
   }
-  h2 .n{color:var(--gold-ink);font-weight:700;margin-inline-end:8px}
+  h2 .n{color:var(--num);font-weight:700;margin-inline-end:8px}
   p{margin:0 0 12px}
   ul{margin:0 0 12px;padding-inline-start:22px}
   li{margin-bottom:7px}
@@ -53,26 +52,26 @@
     background:var(--card);border:1px solid var(--line);border-radius:18px;
     padding:20px 22px;margin:22px 0;
   }
-  .card.key{border-inline-start:4px solid var(--gold)}
-  .card h3{margin:0 0 12px;font-size:1rem}
+  .card.key{border-inline-start:4px solid var(--green)}
+  .card h3{margin:0 0 12px;font-size:1.05rem}
   .card.key ul{list-style:none;padding:0;margin:0}
   .card.key li{
     padding-inline-start:26px;position:relative;margin-bottom:10px;
   }
   .card.key li::before{
     content:"✓";position:absolute;inset-inline-start:0;top:0;
-    color:var(--ok);font-weight:700;
+    color:var(--tick);font-weight:700;
   }
   table{width:100%;border-collapse:collapse;margin:0 0 14px;font-size:.93rem}
   th,td{border:1px solid var(--line);padding:9px 12px;text-align:start;vertical-align:top}
-  th{background:rgba(55,86,208,.07);font-weight:600}
+  th{background:var(--soft);font-weight:700}
   code{
     font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.86em;
-    background:rgba(0,0,0,.05);padding:1px 6px;border-radius:5px;direction:ltr;
+    background:#EDEDED;padding:1px 6px;border-radius:5px;direction:ltr;
     display:inline-block;
   }
-  @media (prefers-color-scheme: dark){ code{background:rgba(255,255,255,.08)} }
-  a{color:var(--gold-ink)}
+  @media (prefers-color-scheme: dark){ code{background:#858584} }
+  a{color:var(--link)}
   .note{color:var(--muted);font-size:.9rem}
   footer{
     margin-top:40px;padding-top:18px;border-top:1px solid var(--line);
@@ -86,7 +85,7 @@
 
 <header>
   <div class="mark" aria-hidden="true">
-    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="hm" gradientUnits="userSpaceOnUse" x1="10" y1="10" x2="110" y2="110"><stop offset="0" stop-color="#6EE8C8"/><stop offset=".5" stop-color="#54B4C8"/><stop offset="1" stop-color="#3756D0"/></linearGradient></defs><path d="M44,14 h32 a32,32 0 0 1 32,32 v14 a32,32 0 0 1 -32,32 H54 L38.6,106.6 a2.8,2.8 0 0 1 -4.8,-1.8 V89 A32,32 0 0 1 12,60 V46 a32,32 0 0 1 32,-32 z" fill="url(#hm)"/><rect x="34.5" y="55" width="13" height="18" rx="4.5" fill="#fff"/><rect x="53.5" y="43" width="13" height="30" rx="4.5" fill="#fff"/><rect x="72.5" y="31" width="13" height="42" rx="4.5" fill="#fff"/></svg>
+    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="hm" gradientUnits="userSpaceOnUse" x1="19.71" y1="24.41" x2="99.32" y2="93"><stop offset="0" stop-color="#63DAC9"/><stop offset="1" stop-color="#427FCE"/></linearGradient></defs><path fill="url(#hm)" d="M 43.57,14.00 C 26.13,14.00 12.00,28.13 12.00,45.57 L 12.00,57.28 C 12.00,72.28 21.30,85.10 34.45,90.29 L 34.45,105.31 C 34.45,107.52 37.06,108.72 38.74,107.26 L 53.94,92.76 L 76.43,92.76 C 93.87,92.76 108.00,78.62 108.00,61.19 L 108.00,45.57 C 108.00,28.13 93.87,14.00 76.43,14.00 Z"/><g fill="#FFFFFF"><path d="M 41.23,72.57 L 29.96,72.57 L 29.96,59.12 C 29.96,57.11 31.58,55.49 33.58,55.49 L 37.61,55.49 C 39.61,55.49 41.23,57.11 41.23,59.12 Z"/><path d="M 57.50,72.57 L 46.23,72.57 L 46.23,47.37 C 46.23,45.37 47.85,43.75 49.85,43.75 L 53.88,43.75 C 55.88,43.75 57.50,45.37 57.50,47.37 Z"/><path d="M 73.77,72.57 L 62.50,72.57 L 62.50,36.39 C 62.50,34.39 64.12,32.77 66.12,32.77 L 70.14,32.77 C 72.15,32.77 73.77,34.39 73.77,36.39 Z"/><path d="M 90.04,72.57 L 78.77,72.57 L 78.77,47.37 C 78.77,45.37 80.39,43.75 82.39,43.75 L 86.41,43.75 C 88.42,43.75 90.04,45.37 90.04,47.37 Z"/><path d="M 92.68,73.23 L 27.32,73.23 L 27.32,72.42 L 92.68,72.42 Z"/></g></svg>
   </div>
   <h1>حسبتي · Hisbati</h1>
   <p class="sub">سياسة الخصوصية — Privacy Policy</p>
@@ -99,7 +98,7 @@
 <!-- ══════════════════ العربية ══════════════════ -->
 <section class="lang" id="ar" lang="ar" dir="rtl">
 
-  <p class="note">تاريخ السريان: ٢ أكتوبر ٢٠٢٦ · التطبيق: حسبتي (<code>com.Hisba.app</code>)</p>
+  <p class="note">تاريخ السريان: ٣١ أكتوبر ٢٠٢٦ · التطبيق: حسبتي (<code>com.Hisba.app</code>)</p>
 
   <div class="card key">
     <h3>الخلاصة</h3>
@@ -148,15 +147,17 @@
     </tr>
   </table>
   <p class="note">يسأل التطبيق أيضاً أندرويد إن كانت تطبيقات بنوك محدّدة بالاسم مثبّتة في جهازك (بيتك، الوطني، بوبيان، الخليج، التجاري، برقان، وربة، الكويت الدولي، الأهلي المتحد، الأهلي الكويتي، ويّاي)، ليعرضها عليك في الإعدادات. لا يطّلع على قائمة تطبيقاتك كاملة، ولا يحفظ الجواب ولا يرسله.</p>
+  <p class="note">عند أول تشغيل يقترح التطبيق بلدك ليضبط عملتك الأساسية. يعرفه من رمز البلد في شريحة الاتصال (يعطيه أندرويد بلا أي إذن)، فإن لم يجده فمن المنطقة الزمنية للجهاز ثم من إعداد المنطقة. لا يُقرأ من الشريحة إلا رمز البلد (مثل <code>KW</code>) — لا رقم هاتفك ولا اسم شركة الاتصالات — ولا يُرسل إلى أي مكان، وتستطيع اختيار بلد آخر في الشاشة نفسها.</p>
 
   <h2><span class="n">٣</span>ما الذي يُحفظ فعلياً</h2>
   <p>الرسالة التي تطابق مفتاحاً بنكياً يُنشأ منها قيد يحتوي:</p>
   <ul>
     <li>المبلغ والعملة والتاريخ والوقت ونوع الحركة (مصروف / إيراد / تحويل).</li>
-    <li>اسم الجهة، واسم البنك المُرسِل، وآخر ٣ أو ٤ أرقام من البطاقة أو الحساب، ورقم المرجع، والرصيد إن أعلنه البنك.</li>
+    <li>اسم الجهة، واسم البنك المُرسِل، وآخر ٣ أو ٤ أرقام من البطاقة أو الحساب، ورقم المرجع، والرصيد وعملته إن أعلنهما البنك.</li>
     <li>التصنيف الذي اخترته أنت أو الذي طابقته قاعدتك.</li>
     <li><strong>نصّ الرسالة الأصلية</strong> — يُحفظ مع القيد كي تستطيع مراجعة القيد ومقارنته بمصدره. يُحذف بحذف القيد.</li>
     <li>ما تكتبه أنت: أسماء الحسابات، الأصناف، القواعد، الميزانيّات، الاشتراكات، الملاحظات، أسعار الصرف.</li>
+    <li>البلد الذي اخترته عند أول تشغيل، والعملة الأساسية والعملة الافتراضية.</li>
     <li><strong>ملفّك الشخصي، إن ملأتَه</strong>: اسمك كما تكتبه أنت، وصورة تختارها من معرض جهازك تُنسخ إلى مساحة التطبيق. كلاهما اختياري ولا تُتحقّق منهما أي جهة، ولا يغادران جهازك. عند لمس حقل الاسم قد تعرض عليك <strong>خدمة التعبئة التلقائية في جهازك</strong> (مثل Google) اسمك المحفوظ لديها؛ هذا عرض من الخدمة تقبله أو ترفضه، والتطبيق لا يقرأ شيئاً منها إلا ما تختاره بنفسك.</li>
   </ul>
   <p>كل ذلك يُخزَّن في قاعدة بيانات SQLite وملفّات إعدادات داخل مساحة التطبيق الخاصة على جهازك، وهي مساحة لا تستطيع التطبيقات الأخرى قراءتها.</p>
@@ -168,7 +169,8 @@
     <li>حين توافق على المفتاح تصير قيداً وتخرج من القائمة. وحين تختار «تجاهل هذا الشكل» تُحذف من القائمة ولا يُحفظ منها إلا العبارة التي طلبتَ عدم السؤال عنها.</li>
     <li>القائمة محدودة بـ٣٠٠ رسالة، ولا تخرج من جهازك.</li>
   </ul>
-  <p>الرسالة التي لا تحمل مبلغاً أصلاً، أو التي هي رمز تحقّق، <strong>لا تُحفظ ولا يُحتفظ منها بشيء</strong>.</p>
+  <p><strong>الإشعار الذي لا يذكر حساباً ولا بطاقة ولا رصيداً</strong> لا يصير حركة من تلقاء نفسه، بل يُحفظ في جهازك في قائمة «لم أفهمها» (نصّه وتاريخه ومُرسِله) حتى تختار «سجّلها حركة» أو تحذفه.</p>
+  <p>الرسالة التي لا تحمل مبلغاً أصلاً، أو التي هي رمز تحقّق، أو التي يتعرّف عليها التطبيق على أنها إعلان أو عرض ترويجي، <strong>لا تُحفظ ولا يُحتفظ منها بشيء</strong>.</p>
 
   <h2><span class="n">٤</span>الباقة الذهبية والدفع</h2>
   <p>قراءة رسائل بنكك والقيود مجانية دائماً. الباقة الذهبية <strong>اشتراك سنويّ</strong> يفتح ميزات إضافية، ويتمّ بالكامل عبر Google Play:</p>
@@ -243,17 +245,30 @@
   <h2><span class="n">١٢</span>الأطفال</h2>
   <p>التطبيق موجَّه للبالغين الذين يديرون حساباتهم البنكية، وغير موجَّه للأطفال. ولا نجمع أي بيانات عن أي شخص في كل الأحوال.</p>
 
-  <h2><span class="n">١٣</span>تغييرات على هذه السياسة</h2>
+  <h2><span class="n">١٣</span>على iPhone</h2>
+  <p>نسخة iPhone تعمل بالمبادئ نفسها — كل شيء في جهازك، لا خادم ولا حساب ولا إعلانات ولا تتبّع — مع فروق يفرضها نظام iOS:</p>
+  <ul>
+    <li><strong>لا يحتوي التطبيق أي شيفرة اتصال بالشبكة.</strong> iOS لا يعرض إذن إنترنت مستقلاً كأندرويد، لذلك القيد هنا في شيفرة التطبيق نفسها.</li>
+    <li><strong>قراءة رسائل البنك:</strong> iOS لا يسمح لأي تطبيق بقراءة رسائلك. أنت من يُعدّ أتمتة في تطبيق «الاختصارات» تحفظ رسائل بنكك في ملف تختاره، ويقرأ حسبتي ذلك الملف وحده بعد أن تمنحه الوصول إليه. تستطيع إيقاف الأتمتة أو سحب الوصول متى شئت.</li>
+    <li><strong>Face ID:</strong> لقفل التطبيق إن فعّلته. التحقّق يجريه النظام، ولا يرى التطبيق بيانات وجهك.</li>
+    <li><strong>الميكروفون والتعرّف على الكلام:</strong> للإدخال الصوتي فقط، وحين تضغط الزر. يطلب التطبيق من iOS إجراء التعرّف داخل الجهاز حين يدعمه جهازك؛ وإن لم يدعمه فقد يعالج iOS الصوت لدى Apple وفق سياسة Apple، لا لدينا. لا يُحفظ الصوت.</li>
+    <li><strong>الإشعارات والتحديث في الخلفية:</strong> إشعارات محلّية يصنعها التطبيق في جهازك (مثل الملخّص اليومي)، وتحديث في الخلفية لقراءة الجديد من ملف الرسائل. لا إشعارات تأتي من خادم.</li>
+    <li><strong>البلد عند أول تشغيل:</strong> يُعرف من المنطقة الزمنية للجهاز ثم من إعداد المنطقة؛ لا يُقرأ شيء من الشريحة.</li>
+    <li><strong>النسخ الاحتياطي:</strong> قد تدخل بيانات التطبيق في نسخة iCloud أو نسخة الكمبيوتر الاحتياطية لجهازك، كما يفعل iOS مع كل التطبيقات وبحسب إعداداتك. تلك النسخة في حسابك لدى Apple، ولا نصل إليها.</li>
+    <li>لا يوجد في نسخة iPhone اشتراك أو شراء داخل التطبيق. وما يخصّ أندرويد في هذه السياسة (الأذونات، قارئ الإشعارات، Google Play، نسخة Google Drive) لا ينطبق عليها.</li>
+  </ul>
+
+  <h2><span class="n">١٤</span>تغييرات على هذه السياسة</h2>
   <p>إن تغيّر ما يفعله التطبيق بالبيانات فستُحدَّث هذه الصفحة ويُغيَّر تاريخ السريان أعلاها. أي إضافة مستقبلية لإذن الإنترنت — إن حدثت — ستُذكر هنا صراحة قبل إصدارها.</p>
 
-  <h2><span class="n">١٤</span>للتواصل</h2>
+  <h2><span class="n">١٥</span>للتواصل</h2>
   <p>لأي سؤال عن الخصوصية أو عن هذه السياسة: <a href="mailto:mh.aziz81@gmail.com">mh.aziz81@gmail.com</a></p>
 </section>
 
 <!-- ══════════════════ English ══════════════════ -->
 <section class="lang" id="en" lang="en" dir="ltr" hidden>
 
-  <p class="note">Effective date: 2 October 2026 · App: Hisbati (<code>com.Hisba.app</code>)</p>
+  <p class="note">Effective date: 31 October 2026 · App: Hisbati (<code>com.Hisba.app</code>)</p>
 
   <div class="card key">
     <h3>The short version</h3>
@@ -302,15 +317,17 @@
     </tr>
   </table>
   <p class="note">The app also asks Android whether specific, named bank apps are installed on your phone (KFH, NBK, Boubyan, Gulf Bank, CBK, Burgan, Warba, KIB, AUB, ABK, Weyay), so it can offer them in settings. It cannot see your full list of apps, and it neither stores nor sends the answer.</p>
+  <p class="note">On first launch the app suggests your country so it can set your base currency. It takes the country code from your SIM card (Android gives it without any permission); failing that, from the phone's time zone, then its region setting. Only the country code (such as <code>KW</code>) is read from the SIM — not your phone number, not your carrier's name — it is sent nowhere, and you can pick another country on the same screen.</p>
 
   <h2><span class="n">3</span>What is actually stored</h2>
   <p>A message that matches a bank key produces an entry containing:</p>
   <ul>
     <li>Amount, currency, date, time, and direction (expense / income / transfer).</li>
-    <li>Merchant name, sending bank, the last 3–4 digits of the card or account, reference number, and the balance if the bank reported one.</li>
+    <li>Merchant name, sending bank, the last 3–4 digits of the card or account, reference number, and the balance, with its currency, if the bank reported one.</li>
     <li>The category you chose, or the one your rule matched.</li>
     <li><strong>The original message text</strong>, kept alongside the entry so you can check an entry against its source. It is deleted when the entry is deleted.</li>
     <li>What you type yourself: account names, categories, rules, budgets, subscriptions, notes, exchange rates.</li>
+    <li>The country you chose on first launch, and your base and default currencies.</li>
     <li><strong>Your profile, if you fill it in</strong>: your name as you type it, and a picture you choose from your gallery, copied into the app's storage. Both optional, verified by no one, and never leaving your phone. When you tap the name field, <strong>your phone's autofill service</strong> (Google's, usually) may offer the name it holds; that is the service's offer to accept or decline, and the app reads nothing from it except what you pick.</li>
   </ul>
   <p>All of it lives in a SQLite database and settings files inside the app's private storage on your phone, which other apps cannot read.</p>
@@ -322,7 +339,8 @@
     <li>Agreeing to the key turns it into an entry and removes it from the queue. Choosing "ignore this shape" removes it too, keeping only the phrase you asked not to be asked about again.</li>
     <li>The queue holds at most 300 messages, and it never leaves your phone.</li>
   </ul>
-  <p>A message with no amount in it at all, or a one-time passcode, <strong>is not stored and nothing is retained from it</strong>.</p>
+  <p><strong>A notification that names no account, card or balance</strong> does not become an entry by itself; it is kept on your phone in the "Didn't understand" list (its text, date and sender) until you choose "Record it as a movement" or delete it.</p>
+  <p>A message with no amount in it at all, a one-time passcode, or a message the app recognises as an advert or promotion <strong>is not stored and nothing is retained from it</strong>.</p>
 
   <h2><span class="n">4</span>The gold pack and payment</h2>
   <p>Reading your bank's messages and keeping the journal are free for good. The gold pack is a <strong>yearly subscription</strong> that opens extra features, and it runs entirely through Google Play:</p>
@@ -397,16 +415,29 @@
   <h2><span class="n">12</span>Children</h2>
   <p>The app is intended for adults managing their own bank accounts and is not directed at children. In any case, no data about anyone is collected.</p>
 
-  <h2><span class="n">13</span>Changes to this policy</h2>
+  <h2><span class="n">13</span>On iPhone</h2>
+  <p>The iPhone app follows the same principles — everything on your phone, no server, no account, no ads, no tracking — with differences that iOS imposes:</p>
+  <ul>
+    <li><strong>The app contains no networking code at all.</strong> iOS has no separate internet permission like Android's, so here the limit lives in the app's code itself.</li>
+    <li><strong>Reading your bank's messages:</strong> iOS lets no app read your messages. You set up an automation in the Shortcuts app that saves your bank's messages to a file you choose, and Hisbati reads that one file once you grant it access. You can turn the automation off or withdraw access at any time.</li>
+    <li><strong>Face ID:</strong> to lock the app, if you turn that on. The check is done by the system; the app never sees your face data.</li>
+    <li><strong>Microphone and speech recognition:</strong> for voice entry only, when you press the button. The app asks iOS to recognise speech on the device when your phone supports it; if it does not, iOS may process the audio at Apple under Apple's policy, not at ours. The audio is not kept.</li>
+    <li><strong>Notifications and background refresh:</strong> local notifications the app makes on your phone (such as the daily digest), and background refresh to read what is new in the messages file. No notification comes from a server.</li>
+    <li><strong>Country on first launch:</strong> taken from the phone's time zone, then its region setting; nothing is read from the SIM.</li>
+    <li><strong>Backup:</strong> the app's data may be included in your iCloud or computer backup, as iOS does for every app and according to your settings. That backup sits in your Apple account; we have no access to it.</li>
+    <li>The iPhone app has no subscription or in-app purchase. The Android-specific parts of this policy (permissions, notification listener, Google Play, Google Drive backup) do not apply to it.</li>
+  </ul>
+
+  <h2><span class="n">14</span>Changes to this policy</h2>
   <p>If what the app does with data changes, this page is updated and the effective date above changes with it. Any future addition of internet permission — should it ever happen — will be stated here explicitly before release.</p>
 
-  <h2><span class="n">14</span>Contact</h2>
+  <h2><span class="n">15</span>Contact</h2>
   <p>For any question about privacy or about this policy: <a href="mailto:mh.aziz81@gmail.com">mh.aziz81@gmail.com</a></p>
 </section>
 
 <footer>
   حسبتي · Hisbati — <span dir="ltr">com.Hisba.app</span><br>
-  <span class="note">آخر تحديث: ٢ أكتوبر ٢٠٢٦ · Last updated 2 October 2026</span>
+  <span class="note">آخر تحديث: ٣١ أكتوبر ٢٠٢٦ · Last updated 31 October 2026</span>
 </footer>
 
 </div>
@@ -429,9 +460,9 @@
   bAr.addEventListener('click', function(){ show('ar'); });
   bEn.addEventListener('click', function(){ show('en'); });
 
-  // A visitor arriving from the Play listing in English should not have to
-  // hunt for the toggle.
-  if ((navigator.language || '').slice(0,2) !== 'ar') show('en');
+  // Arabic is the default for everyone. English opens only from the button,
+  // or from a link ending in #en or ?lang=en (e.g. the English store listing).
+  if (location.hash === '#en' || /[?&]lang=en\b/.test(location.search)) show('en');
 </script>
 </body>
 </html>
